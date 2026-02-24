@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://neae8y0ivano"
+path="res://.godot/imported/JungleTree.obj-e65aa7a0b8bde79f9b9ae8170bb58415.mesh"
+
+[deps]
+
+files=["res://.godot/imported/JungleTree.obj-e65aa7a0b8bde79f9b9ae8170bb58415.mesh"]
+
+source_file="res://FreeModels/JungleTree.obj"
+dest_files=["res://.godot/imported/JungleTree.obj-e65aa7a0b8bde79f9b9ae8170bb58415.mesh", "res://.godot/imported/JungleTree.obj-e65aa7a0b8bde79f9b9ae8170bb58415.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

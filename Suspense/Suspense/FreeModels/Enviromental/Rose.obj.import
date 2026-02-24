@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bf6hivpd3qdss"
+path="res://.godot/imported/Rose.obj-d8ff231a646e5e84001df54b79a497ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rose.obj-d8ff231a646e5e84001df54b79a497ab.mesh"]
+
+source_file="res://FreeModels/Enviromental/Rose.obj"
+dest_files=["res://.godot/imported/Rose.obj-d8ff231a646e5e84001df54b79a497ab.mesh", "res://.godot/imported/Rose.obj-d8ff231a646e5e84001df54b79a497ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

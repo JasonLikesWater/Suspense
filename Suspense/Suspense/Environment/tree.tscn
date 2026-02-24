@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuebwjnbamyg1"]
+
+[ext_resource type="ArrayMesh" uid="uid://c0tfdoobstmgn" path="res://FreeModels/Normal_tree.obj" id="1_rpujt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(1.93388, 2.78955, 1.65726)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jhwf"]
+albedo_color = Color(0.757142, 0.448531, 0.0864826, 1)
+
+[node name="Tree" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115145, -0.894775, -0.1412)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("1_rpujt")
+surface_material_override/1 = SubResource("StandardMaterial3D_0jhwf")

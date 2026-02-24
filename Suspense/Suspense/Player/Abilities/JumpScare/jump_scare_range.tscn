@@ -1,0 +1,493 @@
+[gd_scene load_steps=17 format=3 uid="uid://b1hhcoq21qohd"]
+
+[ext_resource type="Script" path="res://Player/Abilities/JumpScare/jump_scare_range.gd" id="1_1m5xi"]
+[ext_resource type="AudioStream" uid="uid://df0s2duhjh1md" path="res://Opening/getting caught by manager.mp3" id="2_g73cg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3hivo"]
+radius = 3.0
+
+[sub_resource type="Animation" id="Animation_q3nul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance2D2:mesh:radius")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance2D2:mesh:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D2/Bodies:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 600)]
+}
+
+[sub_resource type="Animation" id="Animation_4i2e5"]
+resource_name = "jumpScare"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance2D2:mesh:radius")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 20.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance2D2:mesh:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [4.0, 40.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_10dep"]
+resource_name = "modelscare"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2/Bodies:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1.68179, 1.68179, 1),
+"update": 0,
+"values": [Vector2(0, 600), Vector2(0, 0), Vector2(0, 0), Vector2(0, 600)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeshInstance2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lf2rn"]
+_data = {
+"RESET": SubResource("Animation_q3nul"),
+"jumpScare": SubResource("Animation_4i2e5"),
+"modelscare": SubResource("Animation_10dep")
+}
+
+[sub_resource type="SphereMesh" id="SphereMesh_00esk"]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_vlsye"]
+radius = 2.0
+height = 4.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3gvm5"]
+radius = 300.0
+height = 1000.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nwhbh"]
+radius = 100.0
+height = 400.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_xkkxx"]
+radius = 100.0
+height = 200.0
+
+[sub_resource type="PrismMesh" id="PrismMesh_yrglh"]
+size = Vector3(70, 100, 1)
+
+[sub_resource type="Animation" id="Animation_r0v55"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2/Bodies:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 600)]
+}
+
+[sub_resource type="Animation" id="Animation_umvvo"]
+resource_name = "jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2/Bodies:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 600), Vector2(0, 0), Vector2(0, 0), Vector2(0, 600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jq018"]
+_data = {
+"RESET": SubResource("Animation_r0v55"),
+"jump": SubResource("Animation_umvvo")
+}
+
+[node name="JumpScareRange" type="Area3D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_1m5xi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_3hivo")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lf2rn")
+}
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+position = Vector2(575, 390)
+mesh = SubResource("SphereMesh_00esk")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(575, 390)
+mesh = SubResource("SphereMesh_vlsye")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = 76.0
+offset_right = 55.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hold [Space]
+To Jump Scare"
+horizontal_alignment = 1
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Bodies" type="Node2D" parent="Node2D2"]
+position = Vector2(0, 600)
+
+[node name="Blank" type="Node2D" parent="Node2D2/Bodies"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D2/Bodies/Blank"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(471, 621)
+rotation = 0.349066
+mesh = SubResource("CapsuleMesh_3gvm5")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Node2D2/Bodies/Blank"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(174, 412)
+rotation = -0.523599
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Node2D2/Bodies/Blank"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(838, 707)
+rotation = 0.373371
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Node2D2/Bodies/Blank"]
+position = Vector2(400, 283)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="Node2D2/Bodies/Blank"]
+position = Vector2(719, 369)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="Ghost" type="Node2D" parent="Node2D2/Bodies"]
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D2/Bodies/Ghost"]
+position = Vector2(471, 621)
+rotation = 0.349066
+mesh = SubResource("CapsuleMesh_3gvm5")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Node2D2/Bodies/Ghost"]
+position = Vector2(174, 412)
+rotation = -0.523599
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Node2D2/Bodies/Ghost"]
+position = Vector2(838, 707)
+rotation = 0.373371
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Node2D2/Bodies/Ghost"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(400, 283)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="Node2D2/Bodies/Ghost"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(719, 369)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="Demon" type="Node2D" parent="Node2D2/Bodies"]
+visible = false
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(409, 124)
+rotation = 2.75337
+mesh = SubResource("PrismMesh_yrglh")
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(792, 178)
+rotation = 3.80634
+mesh = SubResource("PrismMesh_yrglh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0.339273, 0, 0.0101489, 1)
+position = Vector2(471, 621)
+rotation = 0.349066
+mesh = SubResource("CapsuleMesh_3gvm5")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0.339273, 0, 0.0101489, 1)
+position = Vector2(174, 412)
+rotation = -0.523599
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0.339273, 0, 0.0101489, 1)
+position = Vector2(838, 707)
+rotation = 0.373371
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(400, 283)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="Node2D2/Bodies/Demon"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(719, 369)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="Beast" type="Node2D" parent="Node2D2/Bodies"]
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(471, 621)
+rotation = 0.349066
+mesh = SubResource("CapsuleMesh_3gvm5")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(214, 328)
+rotation = -0.523599
+scale = Vector2(0.509582, 1)
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(105, 475)
+rotation = -0.523599
+scale = Vector2(0.509582, 1)
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(790, 515)
+rotation = -1.86929
+scale = Vector2(0.509582, 1)
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(854, 649)
+rotation = -1.86929
+scale = Vector2(0.509582, 1)
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(809, 815)
+rotation = -1.86929
+scale = Vector2(0.509582, 1)
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+modulate = Color(0.219501, 0.219501, 0.219501, 1)
+position = Vector2(6.99999, 630)
+rotation = -0.523599
+scale = Vector2(0.509582, 1)
+mesh = SubResource("CapsuleMesh_nwhbh")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+position = Vector2(400, 283)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+position = Vector2(719, 369)
+mesh = SubResource("SphereMesh_xkkxx")
+
+[node name="MeshInstance2D11" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+position = Vector2(411, 502)
+rotation = -0.185773
+mesh = SubResource("PrismMesh_yrglh")
+
+[node name="MeshInstance2D12" type="MeshInstance2D" parent="Node2D2/Bodies/Beast"]
+position = Vector2(558, 554)
+rotation = 0.867191
+mesh = SubResource("PrismMesh_yrglh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_g73cg")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jq018")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

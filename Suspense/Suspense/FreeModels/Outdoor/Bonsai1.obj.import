@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dq70rr538j417"
+path="res://.godot/imported/Bonsai1.obj-93143d00fa482f04a40a26189b0e9a71.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bonsai1.obj-93143d00fa482f04a40a26189b0e9a71.mesh"]
+
+source_file="res://FreeModels/Outdoor/Bonsai1.obj"
+dest_files=["res://.godot/imported/Bonsai1.obj-93143d00fa482f04a40a26189b0e9a71.mesh", "res://.godot/imported/Bonsai1.obj-93143d00fa482f04a40a26189b0e9a71.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

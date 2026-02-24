@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://mpu6ua6gmfmi"]
+
+[ext_resource type="ArrayMesh" uid="uid://ce7ip2uv5nikb" path="res://FreeModels/Enviromental/Rock_01.obj" id="1_26jhi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(0.840542, 1.44617, 1.03878)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2qpx"]
+albedo_color = Color(0.237539, 0.237539, 0.237539, 1)
+
+[node name="Rock" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0518985, -0.223083, 0.0379587)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("1_26jhi")
+surface_material_override/0 = SubResource("StandardMaterial3D_h2qpx")

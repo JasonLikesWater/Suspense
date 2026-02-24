@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvgm0wfm4viw"
+path="res://.godot/imported/stone-wall-curve.obj-9619c20b408b3b04027c12b300effc04.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone-wall-curve.obj-9619c20b408b3b04027c12b300effc04.mesh"]
+
+source_file="res://FreeModels/Graveyard/stone-wall-curve.obj"
+dest_files=["res://.godot/imported/stone-wall-curve.obj-9619c20b408b3b04027c12b300effc04.mesh", "res://.godot/imported/stone-wall-curve.obj-9619c20b408b3b04027c12b300effc04.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

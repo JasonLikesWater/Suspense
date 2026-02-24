@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7ld6rugepcfl"
+path="res://.godot/imported/pumpkin-tall.obj-5ea34d7399ee14838f5e09648f8f77da.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pumpkin-tall.obj-5ea34d7399ee14838f5e09648f8f77da.mesh"]
+
+source_file="res://FreeModels/Graveyard/pumpkin-tall.obj"
+dest_files=["res://.godot/imported/pumpkin-tall.obj-5ea34d7399ee14838f5e09648f8f77da.mesh", "res://.godot/imported/pumpkin-tall.obj-5ea34d7399ee14838f5e09648f8f77da.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

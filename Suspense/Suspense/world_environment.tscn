@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://8udwfer4le5a"]
+
+[ext_resource type="Shader" path="res://Level/world.gdshader" id="1_w2ckn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7nmp0"]
+shader = ExtResource("1_w2ckn")
+shader_parameter/topSkyDay = Color(0.0461562, 0.0455198, 0.230929, 1)
+shader_parameter/horizionSkyDay = Color(0.176849, 0.156493, 0.318165, 1)
+
+[sub_resource type="Sky" id="Sky_hh2im"]
+sky_material = SubResource("ShaderMaterial_7nmp0")
+
+[sub_resource type="Environment" id="Environment_pjp3y"]
+background_mode = 2
+sky = SubResource("Sky_hh2im")
+ambient_light_source = 3
+ambient_light_color = Color(0.314316, 0.314316, 0.314316, 1)
+ambient_light_energy = 3.0
+fog_enabled = true
+fog_light_color = Color(0.526727, 0.656471, 0.97307, 1)
+fog_light_energy = 0.5
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_pjp3y")

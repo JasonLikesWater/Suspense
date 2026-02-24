@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt01emiy5qe2w"
+path="res://.godot/imported/stone-wall.obj-5f9c84c65efff0bf0df45e72833d79db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone-wall.obj-5f9c84c65efff0bf0df45e72833d79db.mesh"]
+
+source_file="res://FreeModels/Graveyard/stone-wall.obj"
+dest_files=["res://.godot/imported/stone-wall.obj-5f9c84c65efff0bf0df45e72833d79db.mesh", "res://.godot/imported/stone-wall.obj-5f9c84c65efff0bf0df45e72833d79db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

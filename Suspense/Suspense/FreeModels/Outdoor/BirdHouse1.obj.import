@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b3um1jcym5dd5"
+path="res://.godot/imported/BirdHouse1.obj-124fd223aff5dcc23fee19b0c511da0e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BirdHouse1.obj-124fd223aff5dcc23fee19b0c511da0e.mesh"]
+
+source_file="res://FreeModels/Outdoor/BirdHouse1.obj"
+dest_files=["res://.godot/imported/BirdHouse1.obj-124fd223aff5dcc23fee19b0c511da0e.mesh", "res://.godot/imported/BirdHouse1.obj-124fd223aff5dcc23fee19b0c511da0e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

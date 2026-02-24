@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ysmlvbcwm0yu"]
+
+[ext_resource type="Script" path="res://Interaction/interaction_area.gd" id="1_4fdf7"]
+
+[node name="InteractionArea" type="Area3D"]
+collision_layer = 0
+script = ExtResource("1_4fdf7")
+money = 3.0
+wage_change = 1.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

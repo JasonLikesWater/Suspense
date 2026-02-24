@@ -1,0 +1,228 @@
+[gd_scene load_steps=2 format=3 uid="uid://brkfcv7jwjo3u"]
+
+[ext_resource type="Script" path="res://Shop/shop_interface.gd" id="1_tbiug"]
+
+[node name="ShopInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_tbiug")
+
+[node name="Shop" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -135.5
+offset_right = -10.0
+offset_bottom = 135.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Shop"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Upgrades"
+horizontal_alignment = 1
+
+[node name="MakeupButton" type="Button" parent="Shop"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Makeup"
+
+[node name="SpecialEffectsButton" type="Button" parent="Shop"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Special Effects"
+
+[node name="MarketingButton" type="Button" parent="Shop"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Marketing"
+
+[node name="Exit" type="Button" parent="Shop"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[node name="Makeup" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -135.5
+offset_right = -10.0
+offset_bottom = 135.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Makeup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Makeup"
+horizontal_alignment = 1
+
+[node name="Vampire" type="Button" parent="Makeup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $25 - Ghost"
+alignment = 0
+
+[node name="Demon" type="Button" parent="Makeup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $30 - Demon"
+alignment = 0
+
+[node name="Beast" type="Button" parent="Makeup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $35 - Beast"
+alignment = 0
+
+[node name="BackButton" type="Button" parent="Makeup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="SpecialEffects" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -135.5
+offset_right = -27.0
+offset_bottom = 135.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SpecialEffects"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Special Effects"
+horizontal_alignment = 1
+
+[node name="BatTransformation" type="Button" parent="SpecialEffects"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $20 - Ghost Morph"
+alignment = 0
+
+[node name="HellsFire" type="Button" parent="SpecialEffects"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $18 - Hell's Fire"
+alignment = 0
+
+[node name="VisceralRoar" type="Button" parent="SpecialEffects"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $25 - Visceral Roar"
+alignment = 0
+
+[node name="BackButton" type="Button" parent="SpecialEffects"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="Marketing" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -135.5
+offset_right = -12.0
+offset_bottom = 135.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Marketing"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Marketing"
+horizontal_alignment = 1
+
+[node name="PlayAnAd" type="Button" parent="Marketing"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $20 - Play An Ad"
+alignment = 0
+
+[node name="SocialMediaCampaign" type="Button" parent="Marketing"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $15 -Social Media Ads"
+alignment = 0
+
+[node name="Time" type="Button" parent="Marketing"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " $20 - Drop Trailer"
+alignment = 0
+
+[node name="BackButton" type="Button" parent="Marketing"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="HelpLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 123.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="Shop/MakeupButton" to="." method="_on_makeup_button_mouse_entered"]
+[connection signal="pressed" from="Shop/MakeupButton" to="." method="_on_makeup_button_pressed"]
+[connection signal="mouse_entered" from="Shop/SpecialEffectsButton" to="." method="_on_special_effects_button_mouse_entered"]
+[connection signal="pressed" from="Shop/SpecialEffectsButton" to="." method="_on_special_effects_button_pressed"]
+[connection signal="mouse_entered" from="Shop/MarketingButton" to="." method="_on_marketing_button_mouse_entered"]
+[connection signal="pressed" from="Shop/MarketingButton" to="." method="_on_marketing_button_pressed"]
+[connection signal="pressed" from="Shop/Exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="Makeup/Vampire" to="." method="_on_vampire_mouse_entered"]
+[connection signal="pressed" from="Makeup/Vampire" to="." method="_on_vampire_pressed"]
+[connection signal="mouse_entered" from="Makeup/Demon" to="." method="_on_demon_mouse_entered"]
+[connection signal="pressed" from="Makeup/Demon" to="." method="_on_demon_pressed"]
+[connection signal="mouse_entered" from="Makeup/Beast" to="." method="_on_beast_mouse_entered"]
+[connection signal="pressed" from="Makeup/Beast" to="." method="_on_beast_pressed"]
+[connection signal="pressed" from="Makeup/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="SpecialEffects/BatTransformation" to="." method="_on_bat_transformation_mouse_entered"]
+[connection signal="pressed" from="SpecialEffects/BatTransformation" to="." method="_on_bat_transformation_pressed"]
+[connection signal="mouse_entered" from="SpecialEffects/HellsFire" to="." method="_on_hells_fire_mouse_entered"]
+[connection signal="pressed" from="SpecialEffects/HellsFire" to="." method="_on_hells_fire_pressed"]
+[connection signal="mouse_entered" from="SpecialEffects/VisceralRoar" to="." method="_on_visceral_roar_mouse_entered"]
+[connection signal="pressed" from="SpecialEffects/VisceralRoar" to="." method="_on_visceral_roar_pressed"]
+[connection signal="pressed" from="SpecialEffects/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="Marketing/PlayAnAd" to="." method="_on_play_an_ad_mouse_entered"]
+[connection signal="pressed" from="Marketing/PlayAnAd" to="." method="_on_play_an_ad_pressed"]
+[connection signal="mouse_entered" from="Marketing/SocialMediaCampaign" to="." method="_on_social_media_campaign_mouse_entered"]
+[connection signal="pressed" from="Marketing/SocialMediaCampaign" to="." method="_on_social_media_campaign_pressed"]
+[connection signal="mouse_entered" from="Marketing/Time" to="." method="_on_time_mouse_entered"]
+[connection signal="pressed" from="Marketing/Time" to="." method="_on_time_pressed"]
+[connection signal="pressed" from="Marketing/BackButton" to="." method="_on_back_button_pressed"]

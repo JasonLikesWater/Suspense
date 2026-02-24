@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bplw30cuh4oc5"]
+
+[ext_resource type="ArrayMesh" uid="uid://cv7bhismgn07n" path="res://FreeModels/Graveyard/grave.obj" id="1_8m473"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(0.493681, 0.857178, 0.883794)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxlal"]
+albedo_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd6gh"]
+albedo_color = Color(0.16727, 0.0975636, 0.0246705, 1)
+
+[node name="Grave" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022769, 0.0714111, 0.0371872)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_8m473")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxlal")
+surface_material_override/1 = SubResource("StandardMaterial3D_wd6gh")

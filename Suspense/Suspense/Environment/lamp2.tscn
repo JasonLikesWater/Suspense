@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxkohlp7xbo4i"]
+
+[ext_resource type="ArrayMesh" uid="uid://ca67edh134eu2" path="res://FreeModels/Outdoor/GardenLamp1.obj" id="1_g522f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p82rh"]
+size = Vector3(0.33252, 1, 0.335938)
+
+[node name="Lamp" type="CharacterBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0100098, 0, -0.0107422)
+shape = SubResource("BoxShape3D_p82rh")
+
+[node name="Lamp1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_g522f")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0521301, 0)
+layers = 5
+light_color = Color(1, 1, 0.113725, 1)
+light_energy = 2.0
+light_size = 5.0

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c53p5nf85fj1x"]
+
+[ext_resource type="ArrayMesh" uid="uid://df4lh5abkyykl" path="res://FreeModels/Outdoor/Bench1.obj" id="1_iem6w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(1.81345, 0.857178, 0.7173)
+
+[node name="Bench" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0670013, 0.0714111, -0.0460587)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_iem6w")

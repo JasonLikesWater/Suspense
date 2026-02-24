@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckgpvxui2awag"
+path="res://.godot/imported/detail-bowl.obj-68b2eaec0f5a9f86728761dede0b65be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail-bowl.obj-68b2eaec0f5a9f86728761dede0b65be.mesh"]
+
+source_file="res://FreeModels/Graveyard/detail-bowl.obj"
+dest_files=["res://.godot/imported/detail-bowl.obj-68b2eaec0f5a9f86728761dede0b65be.mesh", "res://.godot/imported/detail-bowl.obj-68b2eaec0f5a9f86728761dede0b65be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

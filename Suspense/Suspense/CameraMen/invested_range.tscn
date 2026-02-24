@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx2f81kw7t8kj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ahx45"]
+radius = 10.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bboox"]
+
+[node name="InvestedRange" type="Area3D"]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ahx45")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_bboox")

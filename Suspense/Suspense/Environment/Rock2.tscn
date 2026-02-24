@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b20djl1gqj7nx"]
+
+[ext_resource type="ArrayMesh" uid="uid://tmq6spd2sekl" path="res://FreeModels/Outdoor/Rock1.obj" id="1_pik2v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(1.38121, 1.44617, 1.16155)
+
+[node name="Rock" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.084681, -0.223083, -0.0234249)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("1_pik2v")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b204sp6pduge8"]
+
+[ext_resource type="ArrayMesh" uid="uid://5fdbdh7a64l0" path="res://FreeModels/Enviromental/Anthurium.obj" id="1_ddjpc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(0.784546, 1.44617, 0.753871)
+
+[node name="Anthing" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000306368, 0.776917, 0.0525531)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = ExtResource("1_ddjpc")

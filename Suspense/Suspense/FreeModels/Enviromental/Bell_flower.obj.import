@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ch8icwta5mwcn"
+path="res://.godot/imported/Bell_flower.obj-b1ccf9c66a9b1fac886f7a5fc0dc83b2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bell_flower.obj-b1ccf9c66a9b1fac886f7a5fc0dc83b2.mesh"]
+
+source_file="res://FreeModels/Enviromental/Bell_flower.obj"
+dest_files=["res://.godot/imported/Bell_flower.obj-b1ccf9c66a9b1fac886f7a5fc0dc83b2.mesh", "res://.godot/imported/Bell_flower.obj-b1ccf9c66a9b1fac886f7a5fc0dc83b2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

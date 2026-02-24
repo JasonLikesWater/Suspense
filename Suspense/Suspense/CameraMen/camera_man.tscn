@@ -1,0 +1,142 @@
+[gd_scene load_steps=18 format=3 uid="uid://bdxbwafi6knt4"]
+
+[ext_resource type="Script" path="res://CameraMen/camera_man.gd" id="1_adr3u"]
+[ext_resource type="PackedScene" uid="uid://dohh1s4c5qu3o" path="res://CameraMen/suspense_range.tscn" id="2_m47kh"]
+[ext_resource type="PackedScene" uid="uid://cx2f81kw7t8kj" path="res://CameraMen/invested_range.tscn" id="3_c1nqr"]
+[ext_resource type="AudioStream" uid="uid://df0s2duhjh1md" path="res://Opening/getting caught by manager.mp3" id="4_iqqth"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_w36q4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_umkhp"]
+albedo_color = Color(0.196078, 0.545098, 0.419608, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wrilh"]
+radius = 0.15
+height = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_d8pm6"]
+size = Vector3(0.1, 0.3, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1yca"]
+albedo_color = Color(0.270222, 0.270222, 0.270222, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sycft"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtnld"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_llfh3"]
+size = Vector3(0.4, 0.1, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkgft"]
+albedo_color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_0n8cv"]
+radius = 0.2
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkrva"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_64324"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pitwt"]
+size = Vector3(8, 4, 40)
+
+[node name="CameraMan" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_adr3u")
+
+[node name="Body" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Body"]
+mesh = SubResource("CapsuleMesh_w36q4")
+surface_material_override/0 = SubResource("StandardMaterial3D_umkhp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(0.934528, 0.338629, -0.109492, 0, 0.307656, 0.951498, 0.35589, -0.889201, 0.287513, 0.498893, 0.155052, 0.32015)
+mesh = SubResource("CapsuleMesh_wrilh")
+surface_material_override/0 = SubResource("StandardMaterial3D_umkhp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629, 0, 0)
+mesh = SubResource("CapsuleMesh_wrilh")
+surface_material_override/0 = SubResource("StandardMaterial3D_umkhp")
+
+[node name="Camera" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.379225, 0.314513, 0.692778)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Body/Camera"]
+mesh = SubResource("BoxMesh_d8pm6")
+surface_material_override/0 = SubResource("StandardMaterial3D_s1yca")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body/Camera"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.24724, 0.152835)
+mesh = SubResource("CylinderMesh_sycft")
+surface_material_override/0 = SubResource("StandardMaterial3D_rtnld")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Body/Camera"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.24724, -0.104953)
+mesh = SubResource("CylinderMesh_sycft")
+surface_material_override/0 = SubResource("StandardMaterial3D_rtnld")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Body/Camera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.342594)
+mesh = SubResource("PrismMesh_llfh3")
+surface_material_override/0 = SubResource("StandardMaterial3D_wkgft")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.286839, 0.620599, 0.363701)
+mesh = SubResource("SphereMesh_0n8cv")
+surface_material_override/0 = SubResource("StandardMaterial3D_vkrva")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.287, 0.621, 0.364)
+mesh = SubResource("SphereMesh_0n8cv")
+surface_material_override/0 = SubResource("StandardMaterial3D_vkrva")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Body"]
+transform = Transform3D(-1, 0, -8.74228e-08, -9.77525e-09, 0.993729, 0.111816, 8.68745e-08, 0.111816, -0.993729, 0, 0.772948, 0.346445)
+light_energy = 8.0
+spot_angle = 47.0214
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_64324")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.540863, -0.141952)
+target_position = Vector3(0, -1, -80)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+
+[node name="SuspenseRange" parent="." instance=ExtResource("2_m47kh")]
+
+[node name="InvestedRange" parent="." instance=ExtResource("3_c1nqr")]
+
+[node name="FrontRange" type="Area3D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontRange"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21)
+shape = SubResource("BoxShape3D_pitwt")
+
+[node name="RunningTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ChangeState" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="StunTimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_iqqth")
+
+[connection signal="body_entered" from="InvestedRange" to="." method="_on_invested_range_body_entered"]
+[connection signal="body_exited" from="InvestedRange" to="." method="_on_invested_range_body_exited"]
+[connection signal="timeout" from="RunningTimer" to="." method="_on_running_timer_timeout"]
+[connection signal="timeout" from="ChangeState" to="." method="_on_change_state_timeout"]
+[connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]

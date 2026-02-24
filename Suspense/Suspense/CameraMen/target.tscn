@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://edmbu4fvbb14"]
+
+[ext_resource type="Script" path="res://CameraMen/Target.gd" id="1_vxc5o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5bdl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2r1p1"]
+
+[node name="Target" type="Node3D"]
+script = ExtResource("1_vxc5o")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_e5bdl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+mesh = SubResource("BoxMesh_2r1p1")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

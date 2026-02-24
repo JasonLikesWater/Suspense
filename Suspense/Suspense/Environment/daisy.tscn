@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://lahxpicad11d"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2l0uwd24sn82" path="res://FreeModels/Enviromental/Daisy.obj" id="1_u2v4y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(0.784546, 1.44617, 0.753871)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8aco0"]
+albedo_color = Color(0.0542318, 0.295742, 0, 1)
+
+[node name="Daisy" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000306368, 0.776917, 0.0525531)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_u2v4y")
+surface_material_override/0 = SubResource("StandardMaterial3D_8aco0")

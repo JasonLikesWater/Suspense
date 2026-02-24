@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://byxfky05fxkbh"]
+
+[ext_resource type="ArrayMesh" uid="uid://dgo2557sxhuxq" path="res://FreeModels/Enviromental/Grass.obj" id="1_rxq1p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8aco0"]
+albedo_color = Color(0.0542318, 0.295742, 0, 1)
+
+[node name="grass" type="Node3D"]
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_rxq1p")
+surface_material_override/0 = SubResource("StandardMaterial3D_8aco0")

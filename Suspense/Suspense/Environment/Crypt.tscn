@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://dc74veckpaccj"]
+
+[ext_resource type="ArrayMesh" uid="uid://bpvarf0rnvxhp" path="res://FreeModels/Graveyard/crypt-large.obj" id="1_umhqo"]
+[ext_resource type="ArrayMesh" uid="uid://ccgjq2m8v7a3" path="res://FreeModels/Graveyard/crypt-large-roof.obj" id="2_en7sa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lod2d"]
+albedo_color = Color(0.43134, 0.43134, 0.43134, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fm3u2"]
+albedo_color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6v8hp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uf8nv"]
+albedo_color = Color(0.351442, 0.147117, 0.062332, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0crgi"]
+size = Vector3(0.163086, 1.89697, 2.21777)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m2lo7"]
+size = Vector3(1, 1.73132, 0.287964)
+
+[node name="Crypt" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Crypt-large" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_umhqo")
+surface_material_override/0 = SubResource("StandardMaterial3D_lod2d")
+surface_material_override/1 = SubResource("StandardMaterial3D_fm3u2")
+
+[node name="Crypt-large-roof" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = ExtResource("2_en7sa")
+surface_material_override/0 = SubResource("StandardMaterial3D_6v8hp")
+surface_material_override/1 = SubResource("StandardMaterial3D_uf8nv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.418457, 0.448486, 0.0868247)
+shape = SubResource("BoxShape3D_0crgi")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.469535, 0.448486, 0.0868247)
+shape = SubResource("BoxShape3D_0crgi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.365662, -0.920118)
+shape = SubResource("BoxShape3D_m2lo7")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cy6e7rbbtijo2"
+path="res://.godot/imported/Pillar1.obj-12de526f3b6ec971c2acd041f2168615.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pillar1.obj-12de526f3b6ec971c2acd041f2168615.mesh"]
+
+source_file="res://FreeModels/Outdoor/Pillar1.obj"
+dest_files=["res://.godot/imported/Pillar1.obj-12de526f3b6ec971c2acd041f2168615.mesh", "res://.godot/imported/Pillar1.obj-12de526f3b6ec971c2acd041f2168615.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

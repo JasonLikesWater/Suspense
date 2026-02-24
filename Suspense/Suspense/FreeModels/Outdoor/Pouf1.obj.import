@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2ifttbt5m52u"
+path="res://.godot/imported/Pouf1.obj-6089849695c6b1b4923530f41863628c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pouf1.obj-6089849695c6b1b4923530f41863628c.mesh"]
+
+source_file="res://FreeModels/Outdoor/Pouf1.obj"
+dest_files=["res://.godot/imported/Pouf1.obj-6089849695c6b1b4923530f41863628c.mesh", "res://.godot/imported/Pouf1.obj-6089849695c6b1b4923530f41863628c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

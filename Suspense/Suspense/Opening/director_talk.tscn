@@ -1,0 +1,338 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhtrfi61ydbei"]
+
+[ext_resource type="PackedScene" uid="uid://nhe2saymvg84" path="res://Border.tscn" id="1_1wwnw"]
+[ext_resource type="Script" path="res://Opening/director_talk.gd" id="1_a8wvr"]
+[ext_resource type="PackedScene" uid="uid://8udwfer4le5a" path="res://world_environment.tscn" id="2_5vnjc"]
+[ext_resource type="PackedScene" uid="uid://c53p5nf85fj1x" path="res://Environment/bench.tscn" id="4_g2dpa"]
+[ext_resource type="PackedScene" uid="uid://cpl37xee3lebm" path="res://Environment/fireplace.tscn" id="5_cdfjb"]
+[ext_resource type="PackedScene" uid="uid://bkfhyd6xw8jvc" path="res://Environment/chair.tscn" id="6_62uav"]
+[ext_resource type="PackedScene" uid="uid://be8poqjbxc1cg" path="res://Environment/bus.tscn" id="7_wv8pg"]
+[ext_resource type="PackedScene" uid="uid://bxkohlp7xbo4i" path="res://Environment/lamp2.tscn" id="8_ae4g8"]
+[ext_resource type="PackedScene" uid="uid://ds3u5joy57pwe" path="res://Environment/lamp.tscn" id="9_05tvj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbkeg"]
+size = Vector3(1000, 200, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_a7kkw"]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_jhsfd"]
+radius = 40.0
+height = 80.0
+
+[sub_resource type="Animation" id="Animation_dswxq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(60, 475)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_pbdln"]
+resource_name = "talk"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(60, 475), Vector2(85, 450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-3.14159, -3.49066]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cq5v7"]
+_data = {
+"RESET": SubResource("Animation_dswxq"),
+"talk": SubResource("Animation_pbdln")
+}
+
+[node name="DirectorTalk" type="Node"]
+script = ExtResource("1_a8wvr")
+
+[node name="Border" parent="." instance=ExtResource("1_1wwnw")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_5vnjc")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.0831732, -0.417352, 0.904931, -1.36856e-08, 0.908077, 0.418803, -0.996535, -0.0348332, 0.0755276, -25.3838, 7.3365, -26.7333)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.608304, 0.793704, 0, -0.793704, 0.608304, 0, 7.55379, 0)
+light_color = Color(0.752941, 1, 1, 1)
+light_energy = 0.1
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(640, 572.5)
+scale = Vector2(1.036, 1.185)
+mesh = SubResource("BoxMesh_tbkeg")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(167, 476)
+scale = Vector2(0.339, 0.58)
+mesh = SubResource("BoxMesh_tbkeg")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 129.0
+offset_top = -186.0
+offset_right = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "      Hey you must be the new monster! Boy do we need you; test screenings have not gone well so far. Listen, we need to make this movie a hit so I'm going to give you complete creative freedom for how the plot goes."
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 149.0
+offset_top = -233.0
+offset_right = -827.0
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Director"
+
+[node name="Label5" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -56.0
+offset_right = -12.0
+offset_bottom = 2.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "[Press < >]"
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(60, 475)
+rotation = -3.14159
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Node2D2"]
+position = Vector2(-39, 19)
+mesh = SubResource("SphereMesh_a7kkw")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Node2D2"]
+modulate = Color(0.492644, 0.00319453, 0.959437, 1)
+mesh = SubResource("SphereMesh_jhsfd")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="Node2D2"]
+position = Vector2(13, 18)
+mesh = SubResource("SphereMesh_a7kkw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cq5v7")
+}
+autoplay = "talk"
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Balance: $0.00"
+
+[node name="Label4" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -201.0
+offset_top = 46.0
+offset_bottom = 95.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 35
+text = "Wage: $2.00"
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Bench" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.73666, 0, -0.991978, 0, 2, 0, 0.991978, 0, 1.73666, 31.6259, -0.304438, -1.70908)
+
+[node name="Bench13" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.73666, 0, -0.991978, 0, 2, 0, 0.991978, 0, 1.73666, 8.41352, -0.304438, -6.51289)
+
+[node name="Bench4" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.82007, 0, 0.829069, 0, 2, 0, -0.829069, 0, 1.82007, 37.0422, -0.304438, 1.13987)
+
+[node name="Bench2" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(-0.830371, 0, -1.81947, 0, 2, 0, 1.81947, 0, -0.830371, 36.6058, -0.304438, -4.28574)
+
+[node name="Bench3" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.99381, 0, 0.157232, 0, 2, 0, -0.157232, 0, 1.99381, 34.4827, -0.30444, -8.382)
+
+[node name="Grill" parent="Node3D" instance=ExtResource("5_cdfjb")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 32.5272, 0.355175, -5.7877)
+
+[node name="Chair" parent="Node3D" instance=ExtResource("6_62uav")]
+transform = Transform3D(0.628601, 0, 0.777728, 0, 1, 0, -0.777728, 0, 0.628601, 30.2895, -0.271818, -8.72299)
+
+[node name="Chair2" parent="Node3D" instance=ExtResource("6_62uav")]
+transform = Transform3D(-0.30014, 0, 0.953895, 0, 1, 0, -0.953895, 0, -0.30014, 28.7611, -0.26011, -5.54649)
+
+[node name="Bench9" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(-0.549664, 0, -1.92298, 0, 2, 0, 1.92298, 0, -0.549664, -37.5263, -0.30444, -23.2149)
+
+[node name="Bench10" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.23882, 0, -1.57014, 0, 2, 0, 1.57014, 0, 1.23882, -39.0028, -0.30444, -17.2759)
+
+[node name="Bench11" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(-1.96491, 0, 0.37298, 0, 2, 0, -0.37298, 0, -1.96491, -33.8374, -0.30444, -18.9923)
+
+[node name="Bench12" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(0.62772, 0, -1.89894, 0, 2, 0, 1.89894, 0, 0.62772, -30.3649, -0.304442, -22.0302)
+
+[node name="Grill3" parent="Node3D" instance=ExtResource("5_cdfjb")]
+transform = Transform3D(0.357368, 0, -1.45681, 0, 1.5, 0, 1.45681, 0, 0.357368, -33.3504, 0.355173, -23.3113)
+
+[node name="Chair5" parent="Node3D" instance=ExtResource("6_62uav")]
+transform = Transform3D(0.905094, 0, -0.425211, 0, 1, 0, 0.425211, 0, 0.905094, -31.0328, -0.27182, -26.1839)
+
+[node name="Chair6" parent="Node3D" instance=ExtResource("6_62uav")]
+transform = Transform3D(0.854921, 0, 0.518758, 0, 1, 0, -0.518758, 0, 0.854921, -34.4819, -0.260112, -26.9115)
+
+[node name="Bench5" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.73666, 0, -0.991978, 0, 2, 0, 0.991978, 0, 1.73666, 36.3804, -0.304438, 43.3095)
+
+[node name="Bench6" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.82007, 0, 0.829069, 0, 2, 0, -0.829069, 0, 1.82007, 41.7967, -0.304438, 46.1584)
+
+[node name="Bench7" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(-0.830371, 0, -1.81947, 0, 2, 0, 1.81947, 0, -0.830371, 41.3603, -0.304438, 40.7328)
+
+[node name="Bench8" parent="Node3D" instance=ExtResource("4_g2dpa")]
+transform = Transform3D(1.99381, 0, 0.157232, 0, 2, 0, -0.157232, 0, 1.99381, 36.9936, -0.30444, 36.8555)
+
+[node name="Grill2" parent="Node3D" instance=ExtResource("5_cdfjb")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 32.0303, 0.355175, 44.3917)
+
+[node name="Chair3" parent="Node3D" instance=ExtResource("6_62uav")]
+transform = Transform3D(0.955844, 0, 0.293874, 0, 1, 0, -0.293874, 0, 0.955844, 44.1374, -0.271818, 41.8674)
+
+[node name="Chair4" parent="Node3D" instance=ExtResource("6_62uav")]
+transform = Transform3D(-0.30014, 0, 0.953895, 0, 1, 0, -0.953895, 0, -0.30014, 33.5156, -0.26011, 39.4721)
+
+[node name="Node3D3" type="Node3D" parent="."]
+
+[node name="Bus" parent="Node3D3" instance=ExtResource("7_wv8pg")]
+transform = Transform3D(2.95936, 0, -0.492147, 0, 3, 0, 0.492147, 0, 2.95936, -45.3979, -1.05008, -21.3165)
+
+[node name="Bus2" parent="Node3D3" instance=ExtResource("7_wv8pg")]
+transform = Transform3D(2.95936, 0, -0.492147, 0, 3, 0, 0.492147, 0, 2.95936, -37.8989, -1.05008, -35.5721)
+
+[node name="Node3D2" type="Node3D" parent="."]
+
+[node name="Lamp" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.272, -0.608555, -24.5108)
+
+[node name="Lamp3" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1359, -0.608555, -30.6535)
+
+[node name="Lamp4" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5333, -0.608555, -17.0821)
+
+[node name="Lamp5" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.508, -0.608555, -16.8458)
+
+[node name="Lamp6" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8813, -0.608555, -19.8844)
+
+[node name="Lamp7" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.3787, -0.608555, -33.672)
+
+[node name="Lamp12" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04984, -0.608555, -15.2376)
+
+[node name="Lamp13" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114462, -0.608555, -16.9923)
+
+[node name="Lamp14" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37257, -0.608555, -12.785)
+
+[node name="Lamp15" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.7987, -0.608555, -39.6433)
+
+[node name="Lamp16" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.1132, -0.608555, -36.7988)
+
+[node name="Lamp17" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1552, -0.608555, -1.20524)
+
+[node name="Lamp18" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1552, -0.608555, 3.79476)
+
+[node name="Lamp19" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.9124, -0.608555, -2.28946)
+
+[node name="Lamp20" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6091, -0.608554, -10.9661)
+
+[node name="Lamp8" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.4177, -0.608555, -20.7232)
+
+[node name="Lamp9" parent="Node3D2" instance=ExtResource("8_ae4g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6088, -0.608555, -28.012)
+
+[node name="Lamp2" parent="Node3D2" instance=ExtResource("9_05tvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8055, 0.0941492, -23.5477)
+
+[node name="Lamp10" parent="Node3D2" instance=ExtResource("9_05tvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.3097, 0.0941492, -19.0553)
+
+[node name="Lamp11" parent="Node3D2" instance=ExtResource("9_05tvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2491, 0.0941492, -21.8127)

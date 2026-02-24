@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://be8poqjbxc1cg"]
+
+[ext_resource type="ArrayMesh" uid="uid://cr1k2gnexdhs4" path="res://Environment/model.obj" id="1_kufgo"]
+[ext_resource type="Texture2D" uid="uid://doeepr7nwynft" path="res://Environment/Hyundai_ElecCity_FCEV_2022.png" id="2_3la52"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y5qe"]
+albedo_texture = ExtResource("2_3la52")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ejasn"]
+size = Vector3(1.22461, 2.56335, 4.88519)
+
+[node name="Bus" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_kufgo")
+surface_material_override/0 = SubResource("StandardMaterial3D_5y5qe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112305, 0.781677, -0.133575)
+shape = SubResource("BoxShape3D_ejasn")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx4ca0gactm5y"
+path="res://.godot/imported/Rock5.obj-e1eae84f2369e1f0474f210fd3b1c757.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rock5.obj-e1eae84f2369e1f0474f210fd3b1c757.mesh"]
+
+source_file="res://FreeModels/Outdoor/Rock5.obj"
+dest_files=["res://.godot/imported/Rock5.obj-e1eae84f2369e1f0474f210fd3b1c757.mesh", "res://.godot/imported/Rock5.obj-e1eae84f2369e1f0474f210fd3b1c757.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

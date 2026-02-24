@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1vxh20w7ttfl"]
+
+[ext_resource type="ArrayMesh" uid="uid://djsj2ed03xd8v" path="res://FreeModels/Pine_tree.obj" id="1_81s15"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(3.17265, 2.78955, 3.23695)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jhwf"]
+albedo_color = Color(0.535645, 0.305546, 0.089311, 1)
+
+[node name="Tree" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117058, -0.894775, 0.0863417)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1, 0)
+mesh = ExtResource("1_81s15")
+surface_material_override/0 = SubResource("StandardMaterial3D_0jhwf")

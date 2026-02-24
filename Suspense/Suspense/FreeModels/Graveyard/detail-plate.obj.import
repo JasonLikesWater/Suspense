@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://yikcpar73v0n"
+path="res://.godot/imported/detail-plate.obj-f036993bb42b1c4a963b543b7bd7a26f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detail-plate.obj-f036993bb42b1c4a963b543b7bd7a26f.mesh"]
+
+source_file="res://FreeModels/Graveyard/detail-plate.obj"
+dest_files=["res://.godot/imported/detail-plate.obj-f036993bb42b1c4a963b543b7bd7a26f.mesh", "res://.godot/imported/detail-plate.obj-f036993bb42b1c4a963b543b7bd7a26f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

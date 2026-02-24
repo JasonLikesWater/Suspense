@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://dykjr7mluawdl"]
+
+[ext_resource type="Script" path="res://Abilities/Bat/bat.gd" id="1_o37yb"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yuyka"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tex6"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.835294, 0.835294, 0.835294, 0.686275)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sojse"]
+radius = 0.15
+height = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_51rki"]
+radius = 0.2
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28p0h"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Bat" type="Node3D"]
+visible = false
+script = ExtResource("1_o37yb")
+
+[node name="CoolDown" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_yuyka")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2tex6")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 0, 0)
+mesh = SubResource("CapsuleMesh_sojse")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2tex6")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0, 0)
+mesh = SubResource("CapsuleMesh_sojse")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2tex6")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.678, -0.471)
+mesh = SubResource("SphereMesh_51rki")
+surface_material_override/0 = SubResource("StandardMaterial3D_28p0h")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.678, -0.471)
+mesh = SubResource("SphereMesh_51rki")
+surface_material_override/0 = SubResource("StandardMaterial3D_28p0h")
+
+[connection signal="timeout" from="CoolDown" to="." method="_on_cool_down_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

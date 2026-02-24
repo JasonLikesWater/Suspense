@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk4t7e7f4qw56"]
+
+[ext_resource type="ArrayMesh" uid="uid://3pb7dusruco3" path="res://FreeModels/Outdoor/FlowerBed1.obj" id="1_taa0x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(0.990105, 1.44617, 1.04713)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51lfl"]
+albedo_color = Color(0.241566, 0.0941855, 0.0494547, 1)
+
+[node name="FlowerBed" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0110588, -0.223083, 0.118855)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_taa0x")
+surface_material_override/1 = SubResource("StandardMaterial3D_51lfl")

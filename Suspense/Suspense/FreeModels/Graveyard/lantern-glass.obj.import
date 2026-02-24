@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0pkjlm4u71bf"
+path="res://.godot/imported/lantern-glass.obj-54fa575c624f558e034e8b629f644eef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lantern-glass.obj-54fa575c624f558e034e8b629f644eef.mesh"]
+
+source_file="res://FreeModels/Graveyard/lantern-glass.obj"
+dest_files=["res://.godot/imported/lantern-glass.obj-54fa575c624f558e034e8b629f644eef.mesh", "res://.godot/imported/lantern-glass.obj-54fa575c624f558e034e8b629f644eef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

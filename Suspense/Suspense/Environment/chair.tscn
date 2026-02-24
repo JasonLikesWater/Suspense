@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkfhyd6xw8jvc"]
+
+[ext_resource type="ArrayMesh" uid="uid://daqytwoqgo5qr" path="res://FreeModels/Outdoor/Chair1.obj" id="1_qgy2c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yk6xl"]
+size = Vector3(0.990105, 0.857178, 1.04713)
+
+[node name="Chair" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0110588, 0.0714111, 0.118855)
+shape = SubResource("BoxShape3D_yk6xl")
+
+[node name="NormalTree" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_qgy2c")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c8r0i5kqhg038"
+path="res://.godot/imported/Tree_Green_01.obj-7b59d813af4227597f7aac3f400aebe3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tree_Green_01.obj-7b59d813af4227597f7aac3f400aebe3.mesh"]
+
+source_file="res://FreeModels/Enviromental/Tree_Green_01.obj"
+dest_files=["res://.godot/imported/Tree_Green_01.obj-7b59d813af4227597f7aac3f400aebe3.mesh", "res://.godot/imported/Tree_Green_01.obj-7b59d813af4227597f7aac3f400aebe3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

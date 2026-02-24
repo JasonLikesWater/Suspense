@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://q3lkm0013gha"
+path="res://.godot/imported/Statue4.obj-a9a7ad4d897d44dd83fc76c80414c9b5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Statue4.obj-a9a7ad4d897d44dd83fc76c80414c9b5.mesh"]
+
+source_file="res://FreeModels/Outdoor/Statue4.obj"
+dest_files=["res://.godot/imported/Statue4.obj-a9a7ad4d897d44dd83fc76c80414c9b5.mesh", "res://.godot/imported/Statue4.obj-a9a7ad4d897d44dd83fc76c80414c9b5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
