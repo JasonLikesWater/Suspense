@@ -135,14 +135,14 @@ offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
-text = "\"Creating a horror monster is a always thankless losing battle. This is because the moment you draw a single pixel, or sculpted a single object, you have already lost. You have sacrificed the endless unknown for a limited tangible model. And no matter how good your CGI or art style is it can never beed the infinite imagination of your audience.\"
+text = "\"Creating a horror monster is a always thankless losing battle. This is because the moment you draw a single pixel, or sculpted a single object, you have already lost. You have sacrificed the endless unknown for a limited tangible model. And no matter how good your CGI or art style is it can never beat the infinite imagination of your audience.\"
 
-- Jason Le, 2024
+- Water, 2024
 
 \"Yeah I couln't find someone who said this kinda quote
 but it is a very common sentiment so I think it still works.\"
 
-- Jason Le, 2024 Again"
+- Water, 2024 Again"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -172,7 +172,7 @@ mesh = SubResource("BoxMesh_8runm")
 
 [node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(585, 337)
+position = Vector2(585, 347)
 scale = Vector2(1423, 113)
 mesh = SubResource("BoxMesh_8runm")
 
